@@ -200,6 +200,46 @@ ALTER TABLE `pc_user_relations`
   ADD CONSTRAINT `pc_user_relations_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
+-- For the 'parts' table
+INSERT INTO `parts` (`name`) VALUES
+('Part 1'),
+('Part 2'),
+('Part 3'),
+('Part 4'),
+('Part 5');
+
+-- For the 'pcs' table
+INSERT INTO `pcs` VALUES (NULL), (NULL), (NULL), (NULL), (NULL);
+
+-- For the 'softwares' table
+INSERT INTO `softwares` (`name`) VALUES
+('Software 1'),
+('Software 2'),
+('Software 3'),
+('Software 4'),
+('Software 5');
+
+-- For the 'users' table
+INSERT INTO `users` (`name`) VALUES
+('User 1'),
+('User 2'),
+('User 3'),
+('User 4'),
+('User 5');
+
+-- For the 'pc_part_relations' table
+INSERT INTO `pc_part_relations` (`pc_id`, `part_id`) VALUES
+(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+
+-- For the 'pc_soft_relations' table
+INSERT INTO `pc_soft_relations` (`pc_id`, `soft_id`) VALUES
+(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+
+-- For the 'pc_user_relations' table
+INSERT INTO `pc_user_relations` (`pc_id`, `user_id`) VALUES
+(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
